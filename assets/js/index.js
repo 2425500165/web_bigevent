@@ -40,8 +40,10 @@ function renderAvatar(user){
     $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
     // 3、按需选渲染头像
     if(user.user_pic !== null) {
-        $('.layui-nav-img').attr('src', user.user_pic).show()
-        $('text-avatar').hide()
+        $('.layui-nav-img')
+        .attr('src', user.user_pic)
+        .show()
+        $('.text-avatar').hide()
     } else {
         $('.layui-nav-img').hide()
         var first = name[0].toUpperCase()
